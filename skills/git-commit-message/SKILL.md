@@ -1,6 +1,18 @@
 ---
 name: git-commit-message
 description: 读取暂存区变更（git diff --cached）并参考 git log 的最近提交风格生成提交消息。适用于用户让你读取暂存区、总结暂存变更或建议提交消息的场景。
+
+## 安装
+
+通过 askills 安装：
+
+```bash
+# 本地安装
+askills install git-commit-message
+
+# 全局安装
+askills install git-commit-message -g
+```
 ---
 
 # Git 提交消息

@@ -1,6 +1,18 @@
 ---
 name: auto-vitepress
 description: 自动为当前项目生成或更新 VitePress 文档网站。
+
+## 安装
+
+通过 askills 安装：
+
+```bash
+# 本地安装
+askills install auto-vitepress
+
+# 全局安装
+askills install auto-vitepress -g
+```
 ---
 
 # 自动生成 VitePress 文档

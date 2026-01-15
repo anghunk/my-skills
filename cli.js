@@ -138,7 +138,7 @@ function installCommand(skillName, global) {
   const skill = builtIn.find(s => s.name === skillName);
 
   if (!skill) {
-    console.error(`错误: 找不到技能 "${skillName}"`);
+    console.error(`错误：找不到技能 "${skillName}"`);
     console.error('\n使用 "askills list" 查看可用技能列表。');
     process.exit(1);
   }
@@ -152,7 +152,7 @@ function installCommand(skillName, global) {
       cpSync(skill.path, targetPath, { recursive: true });
       console.log(`✓ 技能 "${skillName}" 已安装到 ${targetPath}`);
     } catch (error) {
-      console.error(`安装失败: ${error.message}`);
+      console.error(`安装失败：${error.message}`);
       process.exit(1);
     }
   };
@@ -183,7 +183,7 @@ function uninstallCommand(skillName, global) {
   const targetPath = join(targetDir, skillName);
 
   if (!existsSync(targetPath)) {
-    console.error(`错误: 技能 "${skillName}" 未安装`);
+    console.error(`错误：技能 "${skillName}" 未安装`);
     return;
   }
 
@@ -191,26 +191,7 @@ function uninstallCommand(skillName, global) {
     rmSync(targetPath, { recursive: true, force: true });
     console.log(`✓ 技能 "${skillName}" 已卸载`);
   } catch (error) {
-    console.error(`卸载失败: ${error.message}`);
-    process.exit(1);
-  }
-}
-
-// uninstall 命令
-function uninstallCommand(skillName, global) {
-  const targetDir = getTargetDir(global);
-  const targetPath = join(targetDir, skillName);
-
-  if (!existsSync(targetPath)) {
-    console.error(`错误: 技能 "${skillName}" 未安装`);
-    return;
-  }
-
-  try {
-    rmSync(targetPath, { recursive: true, force: true });
-    console.log(`✓ 技能 "${skillName}" 已卸载`);
-  } catch (error) {
-    console.error(`卸载失败: ${error.message}`);
+    console.error(`卸载失败：${error.message}`);
     process.exit(1);
   }
 }
@@ -242,8 +223,8 @@ function main() {
 
     case 'install':
       if (!args[1] || args[1].startsWith('-')) {
-        console.error('错误: 请指定要安装的技能名称');
-        console.error('用法: askills install <skill-name> [--global]');
+        console.error('错误：请指定要安装的技能名称');
+        console.error('用法：askills install <skill-name> [--global]');
         process.exit(1);
       }
       installCommand(args[1], isGlobal);
@@ -251,8 +232,8 @@ function main() {
 
     case 'uninstall':
       if (!args[1] || args[1].startsWith('-')) {
-        console.error('错误: 请指定要卸载的技能名称');
-        console.error('用法: askills uninstall <skill-name> [--global]');
+        console.error('错误：请指定要卸载的技能名称');
+        console.error('用法：askills uninstall <skill-name> [--global]');
         process.exit(1);
       }
       uninstallCommand(args[1], isGlobal);
@@ -261,14 +242,14 @@ function main() {
     case 'upgrade':
     case 'update':
       // 升级指令 - 更新 askills 本身
-      console.log(`当前版本: askills v${getVersion()}`);
+      console.log(`当前版本：askills v${getVersion()}`);
       console.log('请使用 npm 更新 askills:');
       console.log('  npm install -g askills@latest');
       console.log('  或 npm update -g askills');
       break;
 
     default:
-      console.error(`错误: 未知命令 "${command}"`);
+      console.error(`错误：未知命令 "${command}"`);
       showHelp();
       process.exit(1);
   }

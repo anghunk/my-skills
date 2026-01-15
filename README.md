@@ -1,6 +1,6 @@
 # askills
 
-自用总结的一些 Claude Code Skills Skills 工具。
+一些 Claude Code Skills Skills 工具。
 
 ## 安装
 
