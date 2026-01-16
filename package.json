@@ -1,7 +1,7 @@
 {
   "name": "askills",
-  "version": "0.0.8",
-  "description": "Some Claude Code Skills tools",
+  "version": "0.0.10",
+  "description": "Built-in skills can be installed into the current project or global directory using the askills command.",
   "main": "index.js",
   "author": "anghunk",
   "license": "Apache-2.0",

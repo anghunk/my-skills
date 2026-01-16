@@ -6,6 +6,7 @@
 
 ```bash
 npm i askills -g
+askills ls # 查看全部 skills
 ```
 
 ### 通过 npx 直接使用（无需安装）
@@ -21,7 +22,7 @@ npx askills ls
 安装 Skills 到当前项目的 `.claude/skills/` 目录：
 
 ```bash
-askills install git-commit-message
+askills install <name>
 ```
 
 ### 全局安装
@@ -29,7 +30,7 @@ askills install git-commit-message
 安装 Skills 到全局 `~/.claude/skills/` 目录，所有项目都可以使用：
 
 ```bash
-askills install auto-vitepress -g
+askills install <name> -g
 ```
 
 ### 覆盖已安装的 Skills
@@ -37,10 +38,10 @@ askills install auto-vitepress -g
 如果目标 Skills 已存在，会询问是否覆盖：
 
 ```bash
-askills install git-commit-message -g
+askills install <name> -g
 
 # 输出：
-# Skills "git-commit-message" 已存在于 /Users/user/.claude/skills/git-commit-message
+# Skills "<name>" 已存在于 /Users/user/.claude/skills/<name>
 # 是否覆盖？(yes/no):
 ```
 
@@ -51,10 +52,10 @@ askills install git-commit-message -g
 
 ```bash
 # 本地卸载
-askills uninstall git-commit-message
+askills uninstall <name>
 
-# 全局卸载
-askills uninstall git-commit-message -g
+# 全局卸载<name>
+askills uninstall <name> -g
 ```
 
 ## 手动安装

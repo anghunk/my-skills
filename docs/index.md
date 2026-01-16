@@ -3,10 +3,10 @@ layout: home
 
 hero:
   name: askills
-  tagline: 一些 Claude Code Skills 工具
+  tagline: 可通过 askills 命令安装内置 skills 到当前项目或者全局目录。
   actions:
     - theme: brand
-      text: 安装
+      text: 使用教程
       link: /installation
 
 features:
@@ -40,18 +40,9 @@ npx askills ls
 # 列出所有可用Skills
 askills ls
 
-# 安装Skills到当前项目
-askills install git-commit-message
+# 安装 Skills 到当前项目
+askills install <name>
 
-# 全局安装（所有项目可用）
-askills install auto-vitepress -g
+# 全局安装（所有项目可用 ~/.claude）
+askills install <name> -g
 ```
-
-## 可用 Skills
-
-- **git-commit-message** - 自动生成符合 Git 提交规范的提交信息
-- **auto-vitepress** - 自动为当前项目生成或更新 VitePress 文档
-
-## License
-
-Apache License 2.0
