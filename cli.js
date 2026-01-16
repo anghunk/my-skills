@@ -107,9 +107,9 @@ askills - 管理 Claude Code Skills
 
 示例:
   askills ls
-  askills install git-commit-message
-  askills install auto-vitepress -g
-  askills uninstall git-commit-message
+  askills install <name>
+  askills install <name> -g
+  askills uninstall <name>
   askills update
   askills -v
 `);
